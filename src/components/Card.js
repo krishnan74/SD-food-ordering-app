@@ -73,7 +73,14 @@ export default function Card(props) {
     setSize(priceRef.current ? priceRef.current.value : "");
   }, []);
 
-  let finalPrice = qty * (options[size] ? parseInt(options[size]) : 0); // This ensures safe price calculation
+  let finalPrice = qty * (options[size] ? parseInt(options[size]) : 0);
+
+  // console.log("Quantity", qty);
+  // console.log(options)
+  // console.log("Unit Price", options[size]);
+
+  // console.log("Final Price", finalPrice);
+  // This ensures safe price calculation
 
   return (
     <div>

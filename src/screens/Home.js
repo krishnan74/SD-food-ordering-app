@@ -24,6 +24,7 @@ export default function Home() {
 
       const data = await response.json();
       setFoodItems(data[0]);
+
       setFoodCat(data[1]);
     } catch (error) {
       console.error("Error fetching food data:", error);
@@ -115,7 +116,7 @@ export default function Home() {
                       <Card
                         foodName={filteredItem.name}
                         item={filteredItem}
-                        options={filteredItem.options[0]}
+                        options={filteredItem.options}
                         ImgSrc={filteredItem.img}
                       />
                     </div>
